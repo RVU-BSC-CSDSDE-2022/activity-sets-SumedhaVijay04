@@ -1,18 +1,28 @@
 #include <stdio.h>
-int sum(int *n1,int *n2);
+int input();
+void add(int a, int b, int *sum);
+void output(int a, int b, int sum);
 int main()
 {
-  int x,y;
-  
-  printf("enter the two numbers:");
-  scanf("%d%d",&x,&y);
-  int add=sum(&x,&y);
-  printf("%d",add);
-  return 0;
-    
+  int a,b,sum;
+  a=input();
+  b=input();
+  add(a,b,&sum);
+  output(a,b,sum);
 }
-int sum(int *n1,int *n2)
+int input()
 {
-  int sum=*n1 + *n2;
-  return sum;
+  int n;
+  printf("Enter the number:");
+  scanf("%d",&n);
+  return n;
+}
+void add(int a, int b, int *sum)
+{
+  *sum=a+b;
+  
+}
+void output(int a, int b, int sum)
+{
+  printf("the sum of %d and %d is %d",a,b,sum);
 }
