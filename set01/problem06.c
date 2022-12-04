@@ -1,20 +1,42 @@
 #include <stdio.h>
-
-int main() {
-   int a, b, c;
-
-   a = 11;
-   b = 22;
-   c = 33;
-
-   if ( a > b && a > c )
-      printf("%d is the largest.", a);
-   else if ( b > a && b > c )
-      printf("%d is the largest.", b);
-   else if ( c > a && c > b )
-      printf("%d is the largest.", c);
-   else   
-      printf("Values are not unique");
-
-   return 0;
+int input();
+void compare(int a, int b, int c, int *largest);
+void output(int a, int b, int c, int largest);
+int main()
+{
+  int a,b,c,largest;
+  a=input();
+  b=input();
+  c=input();
+  compare(a,b,c,&largest);
+  output( a,  b,  c,  largest);
 }
+int input()
+{
+  int n;
+  printf("enter the numbers:");
+  scanf("%d",&n);
+  return n;
+
+}
+void compare(int a, int b, int c, int *largest)
+{
+  *largest=0;
+  if ((a>b)&&(a>c))
+  {
+    *largest=a;
+  }
+  else if ((b>a)&&(b>c))
+  {
+    *largest=b;
+  }
+  else
+  {
+    *largest=c;
+  }
+    
+  }
+    void output(int a, int b, int c, int largest)
+    {
+    printf("the largest of %d,%d and %d is %d",a,b,c,largest);
+    }
