@@ -1,5 +1,6 @@
 #include<stdio.h>
-int main(){
+int main()
+{
  char name[10]="Sumedha";
   printf("%s", name);
   return 0;
