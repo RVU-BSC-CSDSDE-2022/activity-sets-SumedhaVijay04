@@ -28,4 +28,5 @@ int input_n()
   void output(int n,int sum)
 {
   printf("The sum of %d natural numbers is %d",n,sum);
+  return 0;
 }
