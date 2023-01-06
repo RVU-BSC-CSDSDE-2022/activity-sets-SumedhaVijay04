@@ -1,13 +1,13 @@
 #include<stdio.h>
 int main()
 {
-  float number1,number2,sum;
-  printf("Enter number1:");
-  scanf("%f",&number1);
+  float num1,num2,sum;
+  printf("Enter num1:");
+  scanf("%f",&num1);
 
-  printf("Enter number2:");
-  scanf("%f",&number2);
+  printf("Enter num2:");
+  scanf("%f",&num2);
 
-  sum= (number1+number2);
-  printf("\n sum is= %f",sum);
+  sum=(num1+num2);
+  printf("\n sum is =%f",sum);
 }
